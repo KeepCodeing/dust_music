@@ -1,5 +1,7 @@
 import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
+import { Input, Button } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
 
 import { HeaderLeft, HeaderRight, HeaderWrapper } from "./app-header";
 import { headerLinks } from "../../common/local-data";
@@ -24,7 +26,25 @@ export default memo(function NavHeader() {
           <div className="logo"></div>
           <div className="links">{navLink}</div>
         </HeaderLeft>
-        <HeaderRight></HeaderRight>
+        <HeaderRight>
+          <Input
+            placeholder="音乐/视频/电台/用户"
+            prefix={<SearchOutlined />}
+            className="rounded-3xl"
+          />
+          <Button
+            type="default"
+            className="mx-7 rounded-3xl text-gray-300 hover:text-gray-500 border-gray-500 "
+          >
+            创作者中心
+          </Button>
+          <Button
+            type="default"
+            className="rounded-3xl hover:text-gray-500 text-gray-500 border-none"
+          >
+            登陆
+          </Button>
+        </HeaderRight>
       </div>
       <div className="divider"></div>
     </HeaderWrapper>

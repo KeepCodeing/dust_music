@@ -5,11 +5,11 @@ import topbar from "../../assets/img/topbar.png";
 export const HeaderWrapper = styled.div`
   height: 75px;
   font-size: 17px;
-  color: #ccc;
+  color: #ccc !important;
   background-color: #242424;
   .content {
     height: 70px;
-    width: 1100px;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -56,13 +56,13 @@ export const HeaderLeft = styled.div`
       }
 
       :hover {
-        color: #fff;
+        color: #fff !important;
       }
     }
 
     .active-link {
       background-color: #000;
-      color: #fff;
+      color: #fff !important;
 
       ::before {
         content: "";
@@ -81,4 +81,8 @@ export const HeaderLeft = styled.div`
   }
 `;
 
-export const HeaderRight = styled.div``;
+export const HeaderRight = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
