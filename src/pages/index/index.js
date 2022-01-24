@@ -1,5 +1,19 @@
-import React from "react";
+import React, { memo } from "react";
+import { connect } from "react-redux";
+import { testAction } from "../../store/actionCreator";
 
-export default function Index() {
-  return <div>发现音乐</div>;
-}
+const Index = memo(function Index(props) {
+  console.log(props);
+  return <div>发现音乐 </div>;
+});
+
+const stateToProps = (state) => ({
+  test: state.test,
+});
+const actionToProps = (dispatch) => ({
+  updateTest() {
+    dispatch(testAction(1));
+  },
+});
+
+export default connect(stateToProps, actionToProps)(Index);

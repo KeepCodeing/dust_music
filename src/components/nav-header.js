@@ -1,8 +1,5 @@
 import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
-import { renderRoutes } from "react-router-config";
-
-import Routes from "../router";
 
 export default memo(function NavHeader() {
   return (
@@ -12,8 +9,6 @@ export default memo(function NavHeader() {
       </NavLink>
       <NavLink to="/my">我的音乐</NavLink>
       <NavLink to="/friend">关注</NavLink>
-
-      {renderRoutes(Routes)}
     </div>
   );
 });

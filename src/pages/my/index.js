@@ -1,5 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
 
-export default function My() {
+export default memo(function My() {
   return <div>我的音乐</div>;
-}
+});

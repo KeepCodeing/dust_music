@@ -1,5 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
 
-export default function Friend() {
-  return <div>关注</div>;
-}
+export default memo(function Friend() {
+  return <div>我的关注</div>;
+});
