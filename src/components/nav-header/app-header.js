@@ -64,7 +64,7 @@ export const HeaderLeft = styled.div`
       background-color: #000;
       color: #fff;
 
-      ::after {
+      ::before {
         content: "";
         position: absolute;
         background-image: url(${topbar});
@@ -73,6 +73,9 @@ export const HeaderLeft = styled.div`
         margin-left: -6px;
         overflow: hidden;
         background-position: -226px 0;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(50%);
       }
     }
   }
