@@ -1,12 +1,9 @@
-import { TEST } from "./constants";
+import { combineReducers } from "redux";
 
-function reducer(state = { test: 0 }, action) {
-  switch (action.type) {
-    case TEST:
-      return { ...state, test: state.test + 1 };
-    default:
-      return state;
-  }
-}
+import { reducer as recommendReducer } from "../pages/index/c-pages/recommend/store";
+
+const reducer = combineReducers({
+  recommend: recommendReducer,
+});
 
 export default reducer;
