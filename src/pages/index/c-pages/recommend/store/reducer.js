@@ -7,7 +7,7 @@ const initialState = {
 const reducer = function (state = initialState, action) {
   switch (action.type) {
     case actions.CHANGE_TOP_BANNER:
-      return { ...state, topBanner: [] };
+      return { ...state, topBanner: action.topBanner };
 
     default:
       return state;
