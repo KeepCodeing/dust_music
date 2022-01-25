@@ -11,7 +11,6 @@ export default memo(function NavHeader() {
     <NavLink
       activeClassName="active-link"
       className="link-item"
-      exact
       key={item.link}
       to={item.link}
     >

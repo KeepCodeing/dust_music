@@ -1,5 +1,5 @@
 export const headerLinks = [
-  { title: "发现音乐", link: "/" },
+  { title: "发现音乐", link: "/discover" },
   { title: "我的音乐", link: "/my" },
   { title: "关注", link: "/friend" },
   { title: "商城", link: "/shop" },
@@ -22,3 +22,12 @@ export const footerInfo = {
     "粤B2-20090191-18  工业和信息化部备案管理系统网站   浙公网安备 33010902002564号",
   ],
 };
+
+export const discoverNavLink = [
+  { title: "推荐", link: "/discover/recommend" },
+  { title: "排行榜", link: "/discover/toplist" },
+  { title: "歌单", link: "/discover/playlist" },
+  { title: "主播电台", link: "/discover/djradio" },
+  { title: "歌手", link: "/discover/artist" },
+  { title: "新碟上架", link: "/discover/album" },
+];
