@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import { discoverNavLink } from "../../common/local-data";
 
-import { DiscoverWrapper, DiscoverNav } from "./components/discover-styled";
+import { DiscoverWrapper, DiscoverNav } from "./style.js";
 
 const Index = memo(function Index(props) {
   const navLinks = discoverNavLink.map((item) => (
