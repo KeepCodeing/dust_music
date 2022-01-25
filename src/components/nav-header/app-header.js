@@ -10,6 +10,7 @@ export const HeaderWrapper = styled.div`
   .content {
     height: 70px;
     width: 80%;
+    min-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
