@@ -6,3 +6,10 @@ export const getTopBanner = function () {
     url: "/banner",
   });
 };
+
+export const getHotRecommend = function (limit) {
+  return request({
+    method: "GET",
+    url: `/personalized?limit=${limit}`,
+  });
+};

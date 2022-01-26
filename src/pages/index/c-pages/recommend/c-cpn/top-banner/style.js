@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import download from "../../../../../assets/img/download.png";
+import download from "../../../../../../assets/img/download.png";
 
 export const BannerWrapper = styled.div.attrs({
   bannerHeight: "285px",
