@@ -4,11 +4,11 @@ import { CoverFace, CoverWrapper } from "./style";
 import calPlay from "../../utils/cal-play";
 
 export default memo(function CoverCard(props) {
-  const { title, picUrl, playCount } = props;
+  const { title, picUrl, playCount, showAction = true } = props;
 
   return (
-    <CoverWrapper>
-      <CoverFace>
+    <CoverWrapper coverStyle={props.coverStyle}>
+      <CoverFace coverFaceStyle={props.coverFaceStyle}>
         <img
           className="cover-img"
           alt="title"
@@ -17,13 +17,15 @@ export default memo(function CoverCard(props) {
         <a className="cover-mask" href="/discover">
           {" "}
         </a>
-        <div className="cover-action">
-          <div>
-            <span className="icon-headset"></span>
-            {calPlay(playCount)}
+        {showAction && (
+          <div className="cover-action">
+            <div>
+              <span className="icon-headset"></span>
+              {calPlay(playCount)}
+            </div>
+            <span className="icon-play"></span>
           </div>
-          <span className="icon-play"></span>
-        </div>
+        )}
       </CoverFace>
       <p className="title">{title}</p>
     </CoverWrapper>

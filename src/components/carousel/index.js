@@ -14,6 +14,8 @@ export default memo(function Swiper(props) {
     showLeftContent = true,
     showRightContent = true,
     carouselStyle = {},
+    showDots = true,
+    autoPlay = true,
   } = props;
 
   // 轮播图宽高
@@ -39,8 +41,9 @@ export default memo(function Swiper(props) {
             <Carousel
               effect="fade"
               beforeChange={bgChange}
-              autoplay
+              autoplay={autoPlay}
               ref={carouselRef}
+              dots={showDots}
             >
               {typeof renderItem === "function" && renderItem()}
             </Carousel>

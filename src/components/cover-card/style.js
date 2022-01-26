@@ -2,8 +2,12 @@ import styled from "styled-components";
 import coverall from "../../assets/img/coverall.png";
 import iconall from "../../assets/img/iconall.png";
 
-export const CoverWrapper = styled.div`
-  width: 140px;
+export const CoverWrapper = styled.div.attrs({
+  defaultStyle: {
+    width: "140px",
+  },
+})`
+  ${(props) => ({ ...props.defaultStyle, ...props.coverStyle })}
 
   .title {
     text-overflow: ellipsis;
@@ -13,10 +17,14 @@ export const CoverWrapper = styled.div`
   }
 `;
 
-export const CoverFace = styled.div`
-  position: relative;
-  height: 140px;
-  width: 100%;
+export const CoverFace = styled.div.attrs({
+  defaultStyle: {
+    position: "relative",
+    height: "140px",
+    width: "100%",
+  },
+})`
+  ${(props) => ({ ...props.defaultStyle, ...props.coverFaceStyle?.wrapper })}
 
   .cover-img {
     height: 100%;
@@ -25,12 +33,13 @@ export const CoverFace = styled.div`
 
   .cover-mask {
     height: 100%;
-    width: 100%;
+    width: ${(props) => props.coverFaceStyle?.bgWidth};
     position: absolute;
     top: 0;
     left: 0;
     background-image: url(${coverall});
-    background-position: 0 0;
+
+    background-position: ${(props) => props.coverFaceStyle?.bgPos || "0 0"};
   }
 
   .cover-action {

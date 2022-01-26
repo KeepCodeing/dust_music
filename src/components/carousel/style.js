@@ -9,11 +9,6 @@ import styled from "styled-components";
 
 const check = (a, b) => a || b;
 
-/**
- * 
- 
- */
-
 export const BannerWrapper = styled.div.attrs({
   deafultCarouselStyle: {
     ctrBtnStyle: {
@@ -49,14 +44,15 @@ export const BannerWrapper = styled.div.attrs({
         props.deafultCarouselStyle.bannerHeight
       )};
 
+    ${(props) => ({ ...props?.carouselStyle?.contentStyle })}
+
     margin: 0 auto;
     display: flex;
-
-    background-color: red;
 
     .controller-btn {
       ${(props) => ({
         ...props.deafultCarouselStyle.ctrBtnStyle,
+        ...props.carouselStyle.ctrBtnStyle,
       })}
 
       &.left {

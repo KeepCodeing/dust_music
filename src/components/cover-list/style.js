@@ -1,11 +1,21 @@
 import styled from "styled-components";
 
-export const CoverListWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+export const CoverListWrapper = styled.div.attrs({
+  defaultStyle: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+  },
+  defaultCoverWrapper: {
+    margin: "20px 0",
+  },
+})`
+  ${(props) => ({ ...props.defaultStyle, ...props.coverListStyle?.wrapper })}
 
   > div {
-    margin: 20px 0;
+    ${(props) => ({
+      ...props.defaultCoverWrapper,
+      ...props.coverListStyle?.coverWrapper,
+    })};
   }
 `;

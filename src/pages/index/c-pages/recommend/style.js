@@ -7,7 +7,7 @@ export const RecommendWrapper = styled.div`
 export const RecommendContent = styled.div`
   width: 984px;
   min-height: 700px;
-  height: 700px;
+  /* height: 700px; */
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid #d3d3d3;
@@ -34,5 +34,6 @@ export const ContentLeft = styled.div`
 export const ContentRight = styled.div`
   width: 25%;
   height: 100%;
+  min-height: 700px;
   background-color: green;
 `;
