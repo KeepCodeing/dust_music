@@ -1,6 +1,7 @@
 import * as actions from "./constants";
 import {
   getHotRecommend,
+  getNewAlbum,
   getTopBanner,
 } from "../../../../../services/recommend";
 
@@ -20,5 +21,13 @@ export const getHotRecommendAction = function (limit) {
         hotRecommend: res.data.result,
       })
     );
+  };
+};
+
+export const getNewAlbumAction = function (limit) {
+  return (dispatch) => {
+    getNewAlbum(limit).then((res) => {
+      dispatch({ type: actions.CHANGE_NEW_ALBUM, newAlbum: res.data.albums });
+    });
   };
 };

@@ -1,5 +1,7 @@
 import React, { memo } from "react";
+
 import Hot from "./c-cpn/hot";
+import NewAlbum from "./c-cpn/new-album";
 import Banner from "./c-cpn/top-banner/banner";
 import {
   ContentLeft,
@@ -15,6 +17,7 @@ export default memo(function Recommend() {
       <RecommendContent>
         <ContentLeft>
           <Hot />
+          <NewAlbum />
         </ContentLeft>
         <ContentRight></ContentRight>
       </RecommendContent>

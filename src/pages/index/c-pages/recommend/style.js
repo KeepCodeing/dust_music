@@ -21,6 +21,14 @@ export const ContentLeft = styled.div`
   width: 75%;
   height: 100%;
   padding: 20px 20px 40px;
+
+  > div {
+    margin-top: 40px;
+
+    :first-of-type {
+      margin-top: 0;
+    }
+  }
 `;
 
 export const ContentRight = styled.div`
